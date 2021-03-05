@@ -11,9 +11,9 @@ class HashTable:
         Uses a map lambda function to instantiate LinkedList object, which is populated with
         None * size, before returning it all as a list
         Note: I don't know exactly how this works but I just messed with this example until it worked
-        # https://www.geeksforgeeks.org/python-lambda-anonymous-functions-filter-map-reduce/
+             https://www.geeksforgeeks.org/python-lambda-anonymous-functions-filter-map-reduce/
         Returns:
-            list: a list of a Linked List
+            list: a list of nodes
         """
         return list(map(lambda z: LinkedList(), [None] * size))
 
@@ -32,7 +32,7 @@ class HashTable:
         if not found then append to the end of the list.
         """
         key_hash = self.hash_func(key)
-        item_pair = [key, value]
+        word_pair = [key, value]
 
         nodeCheck = self.arr[key_hash].head
 
@@ -43,7 +43,7 @@ class HashTable:
             else:
                 nodeCheck = nodeCheck.next
 
-        self.arr[key_hash].append(item_pair)
+        self.arr[key_hash].append(word_pair)
 
     def print_key_values(self):
         """
