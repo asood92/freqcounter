@@ -15,7 +15,7 @@ class HashTable:
         Returns:
             list: a list of nodes
         """
-        return list(map(lambda z: LinkedList(), [None] * size))
+        return list(map(lambda makeArr: LinkedList(), [None] * size))
 
     def hash_func(self, key):
         """
